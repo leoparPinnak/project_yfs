@@ -1,0 +1,59 @@
+
+import React, { useState, useEffect } from 'react';
+
+const images = [
+  
+  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  
+  'https://images.etstur.com/imgproxy/files/images/hotelImages/TR/220282/l/Swissotel-Resort---Spa-Cesme-Genel-390459.jpg',
+  'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.etstur.com/imgproxy/files/images/hotelImages/TR/220282/l/Swissotel-Resort---Spa-Cesme-Genel-390473.jpg'
+];
+
+const Hero: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
+
+  return (
+    <section className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
+      {/* Background Image Slider */}
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      ))}
+
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-4 text-white drop-shadow-lg">
+          Geleceği Bugün İnşa Edin
+        </h1>
+        <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-200 mb-8 drop-shadow-md">
+          Kurumsal mekanlarınızı modern, fonksiyonel ve prestijli alanlara dönüştürüyoruz. YFS İnşaat olarak, vizyonunuzu hassasiyetle hayata geçiriyoruz.
+        </p>
+        <div className="flex justify-center gap-4 flex-wrap">
+          <a href="#services" className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/30">
+            Hizmetlerimiz
+          </a>
+          <a href="#/projects" className="btn-glow-pistachio font-bold py-3 px-8 rounded-lg text-lg inline-block">
+            Projelerimiz
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

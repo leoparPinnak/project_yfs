@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO Meta Tags -->
+  <title>Mimari Sanat | Mimarlık Portfolyosu</title>
+  <meta name="description"
+    content="Mimari Sanat — İtalyan Boya ve Konsep İç Mekan Tasarım Portfolyosu. Eşsiz mimari projeler ve iç mekan tasarımları." />
+  <meta name="keywords" content="mimari sanat, iç mimarlık, italyan boya, iç mekan tasarımı, mimarlık, izmir" />
+  <meta name="author" content="Mimari Sanat" />
+  <link rel="canonical" href="https://mimarisanat.com" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mimarisanat.com" />
+  <meta property="og:title" content="Mimari Sanat | Mimarlık Portfolyosu" />
+  <meta property="og:description" content="İtalyan Boya ve Konsep İç Mekan Tasarım Portfolyosu" />
+  <meta property="og:image" content="/insta_post/post_1/media_1.jpg" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#D4AF37" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            display: ['"Cinzel"', 'serif'],
+            sans: ['"Manrope"', 'sans-serif'],
+          },
+          colors: {
+            // European Palette: Warm Greys, Cream, Bronze
+            bronze: {
+              400: '#A89F91', // Muted Taupe/Bronze
+              500: '#948570', // Classic Bronze
+              600: '#786B59', // Dark Bronze
+            },
+            stone: {
+              50: '#FAFAF9',  // Off-white / Cream
+              100: '#F5F5F4', // Very Light Grey
+              200: '#E7E5E4',
+              300: '#D6D3D1',
+              400: '#A8A29E',
+              500: '#78716C',
+              600: '#57534E',
+              700: '#44403C',
+              800: '#292524', // Warm Charcoal
+              900: '#1C1917', // Deepest Warm Grey (Almost Black)
+              950: '#0C0A09',
+            },
+            // Keep brand aliases for compatibility
+            brand: {
+              dark: '#1C1917',
+              primary: '#CBA36A', // Logo Gold
+              red: '#3E0B14', // Logo Dark Burgundy
+              light: '#FAFAF9',
+              gold: '#A89F91',
+            },
+            rose: {
+              700: '#59111D', // Adjusted Burgundy
+              800: '#3E0B14', // Logo Background Burgundy
+            }
+          },
+          animation: {
+            'slow-zoom': 'slowZoom 20s linear infinite alternate',
+            'fade-in-up': 'fadeInUp 1s ease-out forwards',
+            'scroll-wheel': 'scrollWheel 1.5s ease-in-out infinite',
+          },
+          keyframes: {
+            slowZoom: {
+              '0%': { transform: 'scale(1)' },
+              '100%': { transform: 'scale(1.1)' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            scrollWheel: {
+              '0%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(8px)' },
+              '100%': { transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * {
+      max-width: 100%;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #FAFAF9;
+      overflow-x: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Custom scrollbar for webkit */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1C1917;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #948570;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #A89F91;
+    }
+
+    /* Animation Utilities */
+    .reveal-hidden {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s cubic-bezier(0.17, 0.55, 0.55, 1);
+    }
+
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hide scrollbar for horizontal scroll */
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Brand Gradient Utilities */
+    .text-gradient-brand {
+      background: linear-gradient(135deg, #CBA36A 0%, #3E0B14 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .bg-gradient-brand {
+      background: linear-gradient(135deg, #CBA36A 0%, #3E0B14 100%);
+    }
+
+    .border-gradient-brand {
+      border-image: linear-gradient(135deg, #CBA36A 0%, #3E0B14 100%) 1;
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

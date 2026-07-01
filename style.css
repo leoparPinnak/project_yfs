@@ -1,0 +1,292 @@
+/* Simple scroll-behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Slider Keyframe Animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Use -50% for duplicated content to create a seamless loop */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.prose p {
+    margin-bottom: 1.25em;
+    line-height: 1.6;
+}
+
+/* Logo Slider - BOYUT AYARLARI BURADAN YAPILIR */
+/* .logo-slide: Her bir logo kartının genişliğini belirler. (Mevcut: 300px) */
+/* img etiketindeki Tailwind sınıfları (Partners.tsx): Logonun yüksekliğini ve responsive davranışını kontrol eder. (örn: h-16 sm:h-20 md:h-24) */
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+}
+
+.logo-track {
+  display: flex;
+  /* Genişlik: (bir slide'ın genişliği) * (toplam partner sayısı * 2) */
+  /* Örnek: 300px * (9 partner * 2) = 5400px */
+  width: calc(300px * 18); 
+  animation: scroll 40s linear infinite; /* Animasyon süresi uzatıldı */
+}
+
+.logo-slide {
+  /* Her bir logo kartının genişliği */
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-slide img {
+  max-width: 200px;
+  /* Yükseklik Tailwind CSS ile Partners.tsx dosyasında kontrol ediliyor */
+  object-fit: contain;
+  filter: grayscale(0) opacity(0.7);
+  transition: filter 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.logo-slide:hover img {
+  filter: grayscale(0) opacity(1);
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-block: 1rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, white 5%, white 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, white 5%, white 95%, transparent);
+}
+
+.testimonial-track {
+  display: flex;
+  width: calc(412px * 14); /* (380px width + 32px gap) * 7 items * 2 */
+  animation: scroll 90s linear infinite;
+}
+
+.testimonial-slide {
+  width: 380px;
+  flex-shrink: 0;
+  margin: 0 1rem; /* Creates the gap between cards */
+  height: auto; /* Let content define height */
+  display: flex; 
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-slide:hover {
+    transform: translateY(-5px);
+}
+
+/* Pistachio Green Breathing Glow Button Styles */
+@keyframes breathingGlow {
+  0%, 100% {
+    box-shadow: 0 4px 14px 0 rgba(167, 244, 102, 0.4), inset 0 0 6px rgba(167, 244, 102, 0.2);
+    border-color: rgba(167, 244, 102, 0.4);
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    box-shadow: 0 6px 24px 4px rgba(167, 244, 102, 0.85), inset 0 0 10px rgba(167, 244, 102, 0.4);
+    border-color: rgba(167, 244, 102, 0.85);
+    transform: scale(1.03) translateY(-4px); /* Floating effect */
+  }
+}
+
+.btn-glow-pistachio {
+  background-color: rgba(15, 23, 42, 0.6); /* Slate-900 with opacity */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1.5px solid rgba(167, 244, 102, 0.4);
+  color: #ffffff;
+  animation: breathingGlow 3s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-glow-pistachio:hover {
+  animation: none; /* Stop breathing on hover to give user direct feedback */
+  box-shadow: 0 8px 32px 6px rgba(167, 244, 102, 0.95), inset 0 0 14px rgba(167, 244, 102, 0.5);
+  border-color: rgba(167, 244, 102, 1);
+  background-color: rgba(167, 244, 102, 0.15); /* Pistachio tint on hover */
+  transform: scale(1.06) translateY(-6px); /* Further floating */
+  color: #e6ffcc; /* Light pistachio colored text */
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateBorderReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Animated SVG Logo Styles */
+.logo-svg-animated {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo-svg-animated .fill-shape {
+  fill: currentColor;
+  stroke: none;
+}
+
+.logo-svg-animated .stroke-line {
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.logo-svg-animated #s-top {
+  stroke-width: 20px;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawPath200 4s cubic-bezier(0.16, 1, 0.3, 1) 2.4s forwards;
+}
+
+.logo-svg-animated #s-bottom {
+  stroke-width: 20px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawPath500 4s cubic-bezier(0.16, 1, 0.3, 1) 2.4s forwards;
+}
+
+.logo-svg-animated #bottom-wave {
+  stroke-width: 8px;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawPath200 0.8s ease-out 3.8s forwards;
+}
+
+.logo-svg-animated #y-short-arm {
+  clip-path: inset(0 100% 0 0);
+  animation: revealFromTopLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.logo-svg-animated #f-top {
+  clip-path: inset(0 0 0 100%);
+  animation: revealFromRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.logo-svg-animated #y-long-arm {
+  clip-path: inset(100% 0 0 0);
+  animation: revealFromBottom 1.5s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
+}
+
+.logo-svg-animated #f-mid {
+  clip-path: inset(0 100% 0 0);
+  animation: revealFromLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
+}
+
+.logo-svg-animated #pencil-tip {
+  clip-path: inset(0 0 100% 0);
+  animation: revealFromTop 0.4s ease-out 3.4s forwards;
+}
+
+.logo-svg-animated #brand-text {
+  clip-path: inset(0 100% 0 0);
+  animation: revealFromLeft 1.2s cubic-bezier(0.4, 0, 0.2, 1) 3.8s forwards;
+}
+
+/* Logo Animation Keyframes */
+@keyframes revealFromTopLeft {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes revealFromRight {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes revealFromBottom {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes revealFromLeft {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes drawPath200 {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawPath500 {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes revealFromTop {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}

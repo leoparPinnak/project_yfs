@@ -1,0 +1,421 @@
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+
+  VITE v6.4.1  ready in 856 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.1.33:3000/
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+Port 3000 is in use, trying another one...
+
+  VITE v6.4.1  ready in 858 ms
+
+  ➜  Local:   http://localhost:3001/
+  ➜  Network: http://192.168.1.33:3001/
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+Port 3000 is in use, trying another one...
+Port 3001 is in use, trying another one...
+
+  VITE v6.4.1  ready in 966 ms
+
+  ➜  Local:   http://localhost:3002/
+  ➜  Network: http://192.168.1.33:3002/
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+Port 3000 is in use, trying another one...
+Port 3001 is in use, trying another one...
+Port 3002 is in use, trying another one...
+
+  VITE v6.4.1  ready in 1158 ms
+
+  ➜  Local:   http://localhost:3003/
+  ➜  Network: http://192.168.1.33:3003/
+Port 3000 is in use, trying another one...
+Port 3001 is in use, trying another one...
+Port 3002 is in use, trying another one...
+Port 3003 is in use, trying another one...
+
+  VITE v6.4.1  ready in 1013 ms
+
+  ➜  Local:   http://localhost:3004/
+  ➜  Network: http://192.168.1.33:3004/
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+Port 3000 is in use, trying another one...
+Port 3001 is in use, trying another one...
+Port 3002 is in use, trying another one...
+Port 3003 is in use, trying another one...
+Port 3004 is in use, trying another one...
+
+  VITE v6.4.1  ready in 870 ms
+
+  ➜  Local:   http://localhost:3005/
+  ➜  Network: http://192.168.1.33:3005/
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+Port 3000 is in use, trying another one...
+Port 3001 is in use, trying another one...
+Port 3002 is in use, trying another one...
+Port 3003 is in use, trying another one...
+Port 3004 is in use, trying another one...
+Port 3005 is in use, trying another one...
+Port 3006 is in use, trying another one...
+
+  VITE v6.4.1  ready in 877 ms
+
+  ➜  Local:   http://localhost:3007/
+  ➜  Network: http://192.168.1.33:3007/
+12:45:55 AM [vite] vite.config.ts changed, restarting server...
+12:45:55 AM [vite] vite.config.ts changed, restarting server...
+12:45:56 AM [vite] vite.config.ts changed, restarting server...
+12:45:56 AM [vite] vite.config.ts changed, restarting server...
+12:45:56 AM [vite] vite.config.ts changed, restarting server...
+12:45:56 AM [vite] server restarted.
+12:45:56 AM [vite] server restarted.
+12:45:56 AM [vite] server restarted.
+12:45:56 AM [vite] server restarted.
+12:45:56 AM [vite] server restarted.
+12:46:56 AM [vite] vite.config.ts changed, restarting server...
+12:46:56 AM [vite] vite.config.ts changed, restarting server...
+12:46:56 AM [vite] vite.config.ts changed, restarting server...
+12:46:56 AM [vite] vite.config.ts changed, restarting server...
+12:46:56 AM [vite] vite.config.ts changed, restarting server...
+✘ [ERROR] Expected "}" but found "allowedHosts"
+
+    vite.config.ts:10:4:
+      10 │     allowedHosts: ['www.yfsinsaat.com', '.yfsinsaat.com','www.meka...
+         │     ~~~~~~~~~~~~
+         ╵     }
+
+✘ [ERROR] Expected "}" but found "allowedHosts"
+
+    vite.config.ts:10:4:
+      10 │     allowedHosts: ['www.yfsinsaat.com', '.yfsinsaat.com','www.meka...
+         │     ~~~~~~~~~~~~
+         ╵     }
+
+failed to load config from /home/yfs/vite.config.ts
+12:46:56 AM [vite] Build failed with 1 error:
+vite.config.ts:10:4: ERROR: Expected "}" but found "allowedHosts"
+failed to load config from /home/yfs/vite.config.ts
+12:46:56 AM [vite] server restart failed
+12:46:56 AM [vite] Build failed with 1 error:
+vite.config.ts:10:4: ERROR: Expected "}" but found "allowedHosts"
+12:46:56 AM [vite] server restart failed
+✘ [ERROR] Expected "}" but found "allowedHosts"
+
+    vite.config.ts:10:4:
+      10 │     allowedHosts: ['www.yfsinsaat.com', '.yfsinsaat.com','www.meka...
+         │     ~~~~~~~~~~~~
+         ╵     }
+
+failed to load config from /home/yfs/vite.config.ts
+12:46:56 AM [vite] Build failed with 1 error:
+vite.config.ts:10:4: ERROR: Expected "}" but found "allowedHosts"
+12:46:56 AM [vite] server restart failed
+✘ [ERROR] Expected "}" but found "allowedHosts"
+
+    vite.config.ts:10:4:
+      10 │     allowedHosts: ['www.yfsinsaat.com', '.yfsinsaat.com','www.meka...
+         │     ~~~~~~~~~~~~
+         ╵     }
+
+✘ [ERROR] Expected "}" but found "allowedHosts"
+
+    vite.config.ts:10:4:
+      10 │     allowedHosts: ['www.yfsinsaat.com', '.yfsinsaat.com','www.meka...
+         │     ~~~~~~~~~~~~
+         ╵     }
+
+failed to load config from /home/yfs/vite.config.ts
+12:46:56 AM [vite] Build failed with 1 error:
+vite.config.ts:10:4: ERROR: Expected "}" but found "allowedHosts"
+12:46:56 AM [vite] server restart failed
+failed to load config from /home/yfs/vite.config.ts
+12:46:56 AM [vite] Build failed with 1 error:
+vite.config.ts:10:4: ERROR: Expected "}" but found "allowedHosts"
+12:46:56 AM [vite] server restart failed
+12:47:55 AM [vite] vite.config.ts changed, restarting server...
+12:47:55 AM [vite] vite.config.ts changed, restarting server...
+12:47:55 AM [vite] vite.config.ts changed, restarting server...
+12:47:55 AM [vite] vite.config.ts changed, restarting server...
+12:47:55 AM [vite] vite.config.ts changed, restarting server...
+12:47:55 AM [vite] server restarted.
+12:47:55 AM [vite] server restarted.
+12:47:55 AM [vite] server restarted.
+12:47:56 AM [vite] server restarted.
+12:47:56 AM [vite] server restarted.
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+error when starting dev server:
+Error: Port 3000 is already in use
+    at Server.onError (file:///home/yfs/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:25023:18)
+    at Server.emit (node:events:508:28)
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+
+  VITE v6.4.1  ready in 860 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.1.33:3000/
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/21.png, use /21.png.
+Files in the public directory are served at the root path.
+Instead of /public/3.jpg, use /3.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/12.jpeg, use /12.jpeg.
+Files in the public directory are served at the root path.
+Instead of /public/turkcell.jpg, use /turkcell.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/erhan.jpg, use /erhan.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs1.png, use /yfs1.png.
+Files in the public directory are served at the root path.
+Instead of /public/22.png, use /22.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/21.png, use /21.png.
+Files in the public directory are served at the root path.
+Instead of /public/turkcell.jpg, use /turkcell.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/12.jpeg, use /12.jpeg.
+Files in the public directory are served at the root path.
+Instead of /public/3.jpg, use /3.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/turkcell.jpg, use /turkcell.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs1.png, use /yfs1.png.
+Files in the public directory are served at the root path.
+Instead of /public/22.png, use /22.png.
+Files in the public directory are served at the root path.
+Instead of /public/erhan.jpg, use /erhan.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs1.png, use /yfs1.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/1.jpg, use /1.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/22.png, use /22.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/turkcell.jpg, use /turkcell.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/3.jpg, use /3.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/21.png, use /21.png.
+Files in the public directory are served at the root path.
+Instead of /public/12.jpeg, use /12.jpeg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/3.jpg, use /3.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/21.png, use /21.png.
+Files in the public directory are served at the root path.
+Instead of /public/turkcell.jpg, use /turkcell.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/12.jpeg, use /12.jpeg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs1.png, use /yfs1.png.
+Files in the public directory are served at the root path.
+Instead of /public/erhan.jpg, use /erhan.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/22.png, use /22.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/21.png, use /21.png.
+Files in the public directory are served at the root path.
+Instead of /public/3.jpg, use /3.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/12.jpeg, use /12.jpeg.
+Files in the public directory are served at the root path.
+Instead of /public/turkcell.jpg, use /turkcell.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/turkcell.jpg, use /turkcell.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/21.png, use /21.png.
+Files in the public directory are served at the root path.
+Instead of /public/12.jpeg, use /12.jpeg.
+Files in the public directory are served at the root path.
+Instead of /public/3.jpg, use /3.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs1.png, use /yfs1.png.
+Files in the public directory are served at the root path.
+Instead of /public/erhan.jpg, use /erhan.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/22.png, use /22.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/erhan.jpg, use /erhan.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/22.png, use /22.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs1.png, use /yfs1.png.
+Files in the public directory are served at the root path.
+Instead of /public/21.png, use /21.png.
+Files in the public directory are served at the root path.
+Instead of /public/12.jpeg, use /12.jpeg.
+Files in the public directory are served at the root path.
+Instead of /public/turkcell.jpg, use /turkcell.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/3.jpg, use /3.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs-modern-2.jpg, use /yfs-modern-2.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs-modern-1.jpg, use /yfs-modern-1.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs_logo2.png, use /yfs_logo2.png.
+Files in the public directory are served at the root path.
+Instead of /public/yfs1.png, use /yfs1.png.
+Files in the public directory are served at the root path.
+Instead of /public/erhan.jpg, use /erhan.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/22.png, use /22.png.
+Files in the public directory are served at the root path.
+Instead of /public/3.jpg, use /3.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/21.png, use /21.png.
+Files in the public directory are served at the root path.
+Instead of /public/turkcell.jpg, use /turkcell.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/12.jpeg, use /12.jpeg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs-modern-1.jpg, use /yfs-modern-1.jpg.
+Files in the public directory are served at the root path.
+Instead of /public/yfs-modern-2.jpg, use /yfs-modern-2.jpg.
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+
+  VITE v6.4.1  ready in 861 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.2.33:3000/
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+
+  VITE v6.4.1  ready in 859 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.2.33:3000/
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+error when starting dev server:
+Error: Port 3000 is already in use
+    at Server.onError (file:///home/yfs/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:25023:18)
+    at Server.emit (node:events:508:28)
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+error when starting dev server:
+Error: Port 3000 is already in use
+    at Server.onError (file:///home/yfs/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:25023:18)
+    at Server.emit (node:events:508:28)
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+error when starting dev server:
+Error: Port 3000 is already in use
+    at Server.onError (file:///home/yfs/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:25023:18)
+    at Server.emit (node:events:508:28)
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+
+  VITE v6.4.1  ready in 860 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.2.33:3000/
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+error when starting dev server:
+Error: Port 3000 is already in use
+    at Server.onError (file:///home/yfs/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:25023:18)
+    at Server.emit (node:events:508:28)
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+error when starting dev server:
+Error: Port 3000 is already in use
+    at Server.onError (file:///home/yfs/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:25023:18)
+    at Server.emit (node:events:508:28)
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+
+  VITE v6.4.1  ready in 2077 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.2.33:3000/
+
+> yfs-i̇nşaat-kurumsal-web-sitesi@0.0.0 dev
+> vite
+
+
+  VITE v6.4.1  ready in 871 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.2.33:3000/
