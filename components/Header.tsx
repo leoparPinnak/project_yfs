@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { MenuIcon, XIcon } from './IconComponents';
 import { YfsLogo } from './YfsLogo';
 import { useTheme } from '../context/ThemeContext';
-import { useLanguage, Language } from '../context/LanguageContext';
+import { useLanguage } from '../context/LanguageContext';
 
 interface HeaderProps {
   setContactPopoverOpen: (isOpen: boolean) => void;
@@ -12,8 +12,6 @@ const Header: React.FC<HeaderProps> = ({ setContactPopoverOpen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { language, changeLanguage, t, isRtl } = useLanguage();
-  const [isLangOpen, setIsLangOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { href: '#services', label: t('nav_services') },
@@ -28,20 +26,8 @@ const Header: React.FC<HeaderProps> = ({ setContactPopoverOpen }) => {
     { code: 'ar', label: 'العربية', flag: '🇸🇦' },
   ] as const;
 
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setIsLangOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleOutsideClick);
-    return () => document.removeEventListener('mousedown', handleOutsideClick);
-  }, []);
-
-  const activeLang = languages.find(l => l.code === language) || languages[0];
-
   return (
-    <header className="sticky top-0 z-50 bg-white/80 dark:bg-stone-900/90 backdrop-blur-lg transition-all duration-300">
+    <header className="sticky top-0 z-50 bg-white/80 dark:bg-stone-900/90 backdrop-blur-lg transition-all duration-300 border-b border-gray-100 dark:border-stone-800/80">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -65,40 +51,26 @@ const Header: React.FC<HeaderProps> = ({ setContactPopoverOpen }) => {
             </div>
           </div>
           <div className={`hidden md:flex items-center ${isRtl ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
-            {/* Language Selector Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-1.5 p-2 rounded-lg text-slate-600 dark:text-stone-300 hover:bg-gray-100 dark:hover:bg-stone-800 transition-colors border border-transparent dark:border-stone-800/80 text-sm font-medium"
-                aria-label="Select Language"
-              >
-                <svg className="w-4 h-4 text-slate-500 dark:text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-                <span className="text-xs uppercase font-bold">{activeLang.code}</span>
-              </button>
-
-              {isLangOpen && (
-                <div className={`absolute ${isRtl ? 'left-0' : 'right-0'} mt-2 w-36 bg-white dark:bg-stone-900 rounded-xl shadow-xl border border-gray-150 dark:border-stone-800 overflow-hidden z-50 py-1`}>
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        changeLanguage(lang.code);
-                        setIsLangOpen(false);
-                      }}
-                      className={`w-full px-4 py-2.5 text-left ${isRtl ? 'text-right' : 'text-left'} text-xs flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-stone-800/70 transition-colors ${
-                        language === lang.code
-                          ? 'text-indigo-600 dark:text-brand-primary font-bold bg-gray-50/50 dark:bg-stone-800/30'
-                          : 'text-slate-700 dark:text-stone-300'
-                      }`}
-                    >
-                      <span className="text-base">{lang.flag}</span>
-                      <span>{lang.label}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
+            {/* Language Selector (Circular Flags Side-by-Side) */}
+            <div className={`flex items-center gap-2 ${isRtl ? 'flex-row-reverse' : 'flex-row'}`}>
+              {languages.map((lang) => {
+                const isActive = language === lang.code;
+                return (
+                  <button
+                    key={lang.code}
+                    onClick={() => changeLanguage(lang.code)}
+                    className={`w-7 h-7 rounded-full flex items-center justify-center text-sm transition-all duration-300 font-medium ${
+                      isActive 
+                        ? 'bg-slate-900 dark:bg-stone-950 border border-indigo-500 dark:border-brand-primary text-white scale-110 shadow-md shadow-indigo-500/25 dark:shadow-brand-primary/25 z-10' 
+                        : 'bg-slate-800/10 dark:bg-stone-800/60 border border-transparent hover:bg-slate-800/20 dark:hover:bg-stone-800/80 text-stone-500 dark:text-stone-400 opacity-60 hover:opacity-100 scale-95'
+                    }`}
+                    title={lang.label}
+                    aria-label={`Select ${lang.label}`}
+                  >
+                    <span className="text-base leading-none select-none filter drop-shadow-sm">{lang.flag}</span>
+                  </button>
+                );
+              })}
             </div>
 
             {/* Theme Toggle Button */}
@@ -128,21 +100,26 @@ const Header: React.FC<HeaderProps> = ({ setContactPopoverOpen }) => {
             </button>
           </div>
           <div className={`-mr-2 flex items-center ${isRtl ? 'space-x-reverse space-x-2' : 'space-x-2'} md:hidden`}>
-            {/* Mobile Language selector */}
-            <div className="flex border border-gray-200 dark:border-stone-850 rounded-lg overflow-hidden text-[10px] font-bold">
-              {languages.map((l) => (
-                <button
-                  key={l.code}
-                  onClick={() => changeLanguage(l.code)}
-                  className={`px-2 py-1 transition-colors ${
-                    language === l.code
-                      ? 'bg-indigo-500 text-white dark:bg-brand-primary dark:text-stone-950'
-                      : 'bg-white text-slate-500 dark:bg-stone-900 dark:text-stone-400'
-                  }`}
-                >
-                  {l.code.toUpperCase()}
-                </button>
-              ))}
+            {/* Mobile Language selector (Circular Flags Side-by-Side) */}
+            <div className={`flex items-center gap-1.5 ${isRtl ? 'flex-row-reverse' : 'flex-row'}`}>
+              {languages.map((lang) => {
+                const isActive = language === lang.code;
+                return (
+                  <button
+                    key={lang.code}
+                    onClick={() => changeLanguage(lang.code)}
+                    className={`w-6 h-6 rounded-full flex items-center justify-center text-xs transition-all duration-300 font-medium ${
+                      isActive 
+                        ? 'bg-slate-900 dark:bg-stone-950 border border-indigo-500 dark:border-brand-primary text-white scale-105 shadow-sm z-10' 
+                        : 'bg-slate-800/10 dark:bg-stone-800/60 border border-transparent opacity-60 hover:opacity-100'
+                    }`}
+                    title={lang.label}
+                    aria-label={`Select ${lang.label}`}
+                  >
+                    <span className="text-sm leading-none select-none">{lang.flag}</span>
+                  </button>
+                );
+              })}
             </div>
 
             {/* Mobile Theme Toggle Button */}
