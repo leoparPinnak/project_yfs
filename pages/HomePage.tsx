@@ -2,9 +2,10 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
-import Services from '../components/Services';
 import Partners from '../components/Partners';
+import Services from '../components/Services';
 import Showcase from '../components/Showcase';
+import TurkcellModule from '../components/TurkcellModule';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import Contact from '../components/Contact';
@@ -17,10 +18,11 @@ const HomePage: React.FC<HomePageProps> = ({ setContactPopoverOpen }) => {
   return (
     <>
       <Hero />
-      <Partners />
       <Features />
+      <Partners />
       <Services />
       <Showcase />
+      <TurkcellModule />
       <Testimonials />
       <CTA setContactPopoverOpen={setContactPopoverOpen} />
       <Contact />

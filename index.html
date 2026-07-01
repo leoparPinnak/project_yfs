@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YFS İnşaat | Kurumsal Tadilat ve Proje Yönetimi</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              display: ['"Cinzel"', 'serif'],
+              sans: ['"Manrope"', 'sans-serif'],
+            },
+            colors: {
+              bronze: {
+                400: '#A89F91',
+                500: '#948570',
+                600: '#786B59',
+              },
+              stone: {
+                50: '#FAFAF9',
+                100: '#F5F5F4',
+                200: '#E7E5E4',
+                300: '#D6D3D1',
+                400: '#A8A29E',
+                500: '#78716C',
+                600: '#57534E',
+                700: '#44403C',
+                800: '#292524',
+                900: '#1C1917',
+                950: '#0C0A09',
+              },
+              brand: {
+                dark: '#1C1917',
+                primary: '#CBA36A', // Gold
+                red: '#3E0B14',     // Burgundy
+                light: '#FAFAF9',
+                gold: '#A89F91',
+              },
+              rose: {
+                700: '#59111D',
+                800: '#3E0B14',
+              }
+            }
+          }
+        }
+      }
+    </script>
     <link rel="stylesheet" href="style.css">
 <script type="importmap">
 {
@@ -17,7 +65,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-slate-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-500 font-sans">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>

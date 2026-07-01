@@ -34,19 +34,16 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
 
   return (
     <div 
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white transition-opacity duration-[600ms] ease-in-out ${
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-stone-900 transition-opacity duration-[600ms] ease-in-out ${
         fadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       aria-hidden={fadeOut}
     >
       <div className="w-80 md:w-96 max-w-[80vw] h-auto flex flex-col items-center justify-center">
-        {/* Animated YFS Logo in Black (re-mounted on key change to trigger loop) */}
-        <YfsLogo key={key} className="w-full h-auto text-slate-950" loop={false} showText={true} />
+        {/* Animated YFS Logo in Gold (re-mounted on key change to trigger loop) */}
+        <YfsLogo key={key} className="w-full h-auto text-brand-primary" loop={false} showText={true} />
         
-        {/* Status subtitle */}
-        <p className="text-[10px] tracking-[0.4em] text-indigo-600 font-semibold uppercase mt-6">
-          Geleceği İnşa Ediyor
-        </p>
+
       </div>
     </div>
   );

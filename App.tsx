@@ -54,7 +54,7 @@ const App: React.FC = () => {
   return (
     <>
       {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
-      <div className={`bg-white min-h-screen transition-opacity duration-[800ms] ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`bg-white dark:bg-stone-950 min-h-screen text-slate-900 dark:text-stone-100 transition-colors duration-500 transition-opacity duration-[800ms] ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <ContactPopover isOpen={isContactPopoverOpen} onClose={() => setContactPopoverOpen(false)} />
         <Header setContactPopoverOpen={setContactPopoverOpen} />
         <main>

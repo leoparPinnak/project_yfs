@@ -17,25 +17,21 @@ const extendedPartners = [...partners, ...partners];
 
 const Partners: React.FC = () => {
     return (
-        <section className="py-8 bg-gray-50 border-b border-gray-100 overflow-hidden">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">
-                    GÜÇLÜ REFERANSLARIMIZ
-                </p>
-
+        <section className="py-8 bg-gray-50/95 dark:bg-stone-900/95 backdrop-blur-md border-y border-gray-100/40 dark:border-stone-850/60 overflow-hidden transition-colors duration-500">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 font-sans">
                 {/* Logo Slider */}
                 <div className="logo-slider">
                     <div className="logo-track flex">
                         {extendedPartners.map((partner, index) => (
                             <div
                                 key={`${partner.name}-${index}`}
-                                className="logo-slide flex-shrink-0 flex items-center justify-center px-6 md:px-8 lg:px-10"
+                                className="logo-slide flex-shrink-0 flex items-center justify-center px-8 md:px-12 lg:px-16"
                                 title={partner.name}
-                            >
+                             >
                                 <img
                                     src={partner.logo}
                                     alt={`${partner.name} Logosu`}
-                                    className="h-16 sm:h-20 md:h-24 w-auto object-contain filter grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                                    className="h-15 sm:h-18 w-auto object-contain filter transition-all duration-300 hover:scale-110 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 dark:grayscale-0 dark:opacity-100"
                                 />
                             </div>
                         ))}

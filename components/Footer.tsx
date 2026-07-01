@@ -1,24 +1,27 @@
-
 import React from 'react';
 import { YfsLogo } from './YfsLogo';
+import { useTheme } from '../context/ThemeContext';
+import { useLanguage } from '../context/LanguageContext';
 
 const Footer: React.FC = () => {
+    const { theme } = useTheme();
+    const { t, isRtl } = useLanguage();
+
     const footerLinks = {
-        'Hizmetler': [
-            { label: 'Kurumsal Tadilat', href: '#services' },
-            { label: 'Ofis Tasarımı', href: '#services' },
-            { label: 'Mağaza Renovasyonu', href: '#services' },
-            { label: 'Proje Yönetimi', href: '#services' },
+        [t('nav_services')]: [
+            { label: t('footer_link_office'), href: '#services' },
+            { label: t('footer_link_store'), href: '#services' },
+            { label: t('service_2_title'), href: '#services' },
         ],
-        'Şirket': [
-            { label: 'Projelerimiz', href: '#/projects' },
-            { label: 'Kariyer', href: '#' },
-            { label: 'İletişim', href: '#contact' },
+        [t('footer_cat_company')]: [
+            { label: t('nav_projects'), href: '#/projects' },
+            { label: t('footer_link_careers'), href: '#' },
+            { label: t('nav_contact'), href: '#contact' },
         ],
-        'Destek': [
-            { label: 'S.S.S.', href: '#' },
-            { label: 'Gizlilik Politikası', href: '#' },
-            { label: 'Kullanım Şartları', href: '#' },
+        [t('footer_cat_support')]: [
+            { label: t('footer_link_faq'), href: '#' },
+            { label: t('footer_link_privacy'), href: '#' },
+            { label: t('footer_link_terms'), href: '#' },
         ],
     };
 
@@ -29,24 +32,26 @@ const Footer: React.FC = () => {
     ];
 
     return (
-        <footer className="bg-slate-100 border-t border-slate-200" aria-labelledby="footer-heading">
+        <footer className="bg-slate-100 dark:bg-stone-950 border-t border-slate-200 dark:border-stone-900 transition-colors duration-500 font-sans" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">Footer</h2>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div className="col-span-2 md:col-span-1">
-                        <a href="/#/" className="flex items-center space-x-2 text-slate-900">
-                            <YfsLogo className="h-9 w-auto text-indigo-600" />
-                            <span className="font-bold text-xl">YFS İnşaat</span>
+                <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 ${isRtl ? 'text-right' : 'text-left'}`}>
+                    <div className={`col-span-2 md:col-span-1 ${isRtl ? 'flex flex-col items-end' : 'flex flex-col items-start'}`}>
+                        <a href="/#/" className={`flex items-center space-x-2 text-slate-900 dark:text-stone-100 group ${isRtl ? 'flex-row-reverse space-x-reverse' : ''}`}>
+                            <YfsLogo className="h-9 w-auto text-indigo-600 dark:text-brand-primary" />
+                            <span className="font-bold text-xl transition-colors group-hover:text-indigo-600 dark:group-hover:text-brand-primary">YFS İnşaat</span>
                         </a>
-                        <p className="text-slate-500 mt-4 text-sm">Mekanlarınıza değer katan, modern ve kaliteli inşaat çözümleri.</p>
+                        <p className="text-slate-500 dark:text-stone-400 mt-4 text-sm font-light">
+                            {t('footer_logo_desc')}
+                        </p>
                     </div>
                     {Object.entries(footerLinks).map(([category, links]) => (
-                        <div key={category}>
-                            <h3 className="text-sm font-semibold text-slate-900 tracking-wider uppercase">{category}</h3>
+                        <div key={category} className={`${isRtl ? 'text-right' : 'text-left'}`}>
+                            <h3 className="text-sm font-semibold text-slate-900 dark:text-stone-300 tracking-wider uppercase dark:font-display dark:font-normal">{category}</h3>
                             <ul className="mt-4 space-y-2">
                                 {links.map((link) => (
                                     <li key={link.label}>
-                                        <a href={link.href} className="text-base text-slate-500 hover:text-indigo-600 transition-colors duration-200">
+                                        <a href={link.href} className="text-base text-slate-500 dark:text-stone-400 hover:text-indigo-600 dark:hover:text-brand-primary transition-colors duration-200 font-light">
                                             {link.label}
                                         </a>
                                     </li>
@@ -55,16 +60,18 @@ const Footer: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                <div className="mt-12 border-t border-slate-200 pt-8 flex flex-col sm:flex-row items-center justify-between">
-                    <div className="flex space-x-6">
+                <div className={`mt-12 border-t border-slate-200 dark:border-stone-900 pt-8 flex flex-col sm:flex-row items-center justify-between ${isRtl ? 'sm:flex-row-reverse' : ''}`}>
+                    <div className={`flex ${isRtl ? 'space-x-reverse space-x-6' : 'space-x-6'}`}>
                         {socialLinks.map((item) => (
-                            <a key={item.name} href={item.href} className="text-slate-500 hover:text-indigo-600 transition-colors duration-200">
+                            <a key={item.name} href={item.href} className="text-slate-500 dark:text-stone-400 hover:text-indigo-600 dark:hover:text-brand-primary transition-colors duration-200">
                                 <span className="sr-only">{item.name}</span>
                                 {item.icon}
                             </a>
                         ))}
                     </div>
-                    <p className="mt-8 sm:mt-0 text-sm text-slate-400">&copy; {new Date().getFullYear()} YFS İnşaat. Tüm hakları saklıdır.</p>
+                    <p className="mt-8 sm:mt-0 text-sm text-slate-400 dark:text-stone-500 font-light">
+                        &copy; {new Date().getFullYear()} YFS İnşaat. {t('footer_rights')}
+                    </p>
                 </div>
             </div>
         </footer>
